@@ -46,7 +46,7 @@ func TestMode1(t *testing.T) {
 	assert.Equal(t, 1, lsSpy.Counts("LegacyStorage.Delete"))
 	assert.Equal(t, 0, sSpy.Counts("Storage.Delete"))
 
-	// it should use the Legacy Update implementation
+	// Update: it should use the Legacy Update implementation
 	var updated = (rest.UpdatedObjectInfo)(nil)
 	var validateObjFn = func(ctx context.Context, obj runtime.Object) error { return nil }
 	var validateObjUpdateFn = func(ctx context.Context, obj, old runtime.Object) error { return nil }
