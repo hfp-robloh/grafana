@@ -43,7 +43,7 @@ func TestMode4(t *testing.T) {
 	assert.NoError(t, err)
 	assert.Equal(t, 0, lsSpy.Counts("LegacyStorage.Delete"))
 	assert.Equal(t, 1, sSpy.Counts("Storage.Delete"))
-	
+
 	// Update: it should update only in Storage
 	dummy := &example.Pod{}
 	uoi := UpdatedObjInfoObj{}
